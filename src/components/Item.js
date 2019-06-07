@@ -1,18 +1,21 @@
 import React from "react";
-import { Button, Card } from "react-bootstrap";
+import { Button, Card, Row, Col } from "react-bootstrap";
 
 class Item extends React.Component {
   render() {
-    const { title, description, vignette, url } = this.props;
+    const { title, vignette } = this.props;
     return (
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={vignette} alt="image" />
-        <Card.Body>
-          <Card.Title>{title}</Card.Title>
-          <Card.Text>{description}</Card.Text>
-          <Button variant="primary" src={url}>Regardez</Button>
-        </Card.Body>
-      </Card>
+      <div>
+        <Row>
+          <div class="col col-lg-2">
+            <img src={vignette} alt="image" width="60px" height="auto" />
+          </div>
+          <Col>
+            <h4 class="text-left">{title}</h4>
+          </Col>
+        </Row>
+        <hr />
+      </div>
     );
   }
 }

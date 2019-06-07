@@ -15,17 +15,7 @@ class App extends Component {
         <br />
         <br />
         <br />
-        <div class="row">
-          <div class="col-sm">
-            <Video />
-          </div>
-          <div class="col-sm">
-          </div>
-          <div class="col-sm">
-            <List />
-          </div>
-        </div>
-        
+        <List />
       </div>
     );
   }
